@@ -8,7 +8,7 @@ package br.com.deltaz123.negocio;
 
 /**
  *
- * @author Ligtelecom
+ * @author DeltaZ123TI
  */
 public class Departamento {
     
