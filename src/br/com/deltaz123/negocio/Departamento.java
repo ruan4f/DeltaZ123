@@ -11,5 +11,17 @@ package br.com.deltaz123.negocio;
  * @author DeltaZ123TI
  */
 public class Departamento {
+    private int codDepto;
+    private String descricao;
     
+    //Construtores
+    //Construtor padrão
+    public Departamento(){
+        
+    }
+    
+    public Departamento(int codDepto, String descricao){
+        this.codDepto = codDepto;
+        this.descricao = descricao;
+    }
 }
