@@ -11,6 +11,7 @@ package br.com.deltaz123.negocio;
  * @author DeltaZ123TI
  */
 public class Departamento {
+    //Declaração de atributos
     private int codDepto;
     private String descricao;
     
@@ -24,4 +25,35 @@ public class Departamento {
         this.codDepto = codDepto;
         this.descricao = descricao;
     }
+    
+    //Declaração de Getters e Setters
+
+    /**
+     * @return the codDepto
+     */
+    public int getCodDepto() {
+        return codDepto;
+    }
+
+    /**
+     * @param codDepto the codDepto to set
+     */
+    public void setCodDepto(int codDepto) {
+        this.codDepto = codDepto;
+    }
+
+    /**
+     * @return the descricao
+     */
+    public String getDescricao() {
+        return descricao;
+    }
+
+    /**
+     * @param descricao the descricao to set
+     */
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+    
 }
