@@ -12,8 +12,8 @@ package br.com.deltaz123.negocio;
  */
 public class Inventario {
     //Declaração de atributos
-    //private Equipamento equipamento;
-    //private Software software;
+    private Equipamento equipamento;
+    private Software software;
     
     
 }
