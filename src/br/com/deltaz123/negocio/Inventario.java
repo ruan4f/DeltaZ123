@@ -15,5 +15,20 @@ public class Inventario {
     private Equipamento equipamento;
     private Software software;
     
-    
+    //Declaração de Getters e Setters
+    public Equipamento getEquipamento(){
+        return equipamento;
+    }
+
+    public void setEquipamento(Equipamento equipamento){
+        this.equipamento = equipamento;
+    }
+
+    public Software getSoftware(){
+        return software;
+    }
+
+    public void setSoftware(Software software){
+        this.software = software;
+    }
 }
