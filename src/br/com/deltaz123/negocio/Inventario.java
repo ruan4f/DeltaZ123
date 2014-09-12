@@ -11,5 +11,7 @@ package br.com.deltaz123.negocio;
  * @author DeltaZ123
  */
 public class Inventario {
-    
+    //Declaração de atributos
+    //private Equipamento equipamento;
+    //private Software software;
 }
