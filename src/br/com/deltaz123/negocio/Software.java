@@ -9,6 +9,7 @@ import java.util.Date;
  *
  */
 public class Software {
+	private int codSequencial;
 	private String nomSoftware ;
 	private String fabricante ;
 	private String versao;
@@ -17,10 +18,11 @@ public class Software {
 	private String chaveLicenca;
 	private Date dataEspiracao;
 	private String classificacao;
-	 public Software(String nomSoftware, String fabricante, String versao,
+	 public Software(int codSequencial, String nomSoftware, String fabricante, String versao,
 				String nota_fiscal, Date dataNota, String chaveLicenca,
 				Date dataEspiracao, String classificacao) {
 			super();
+			this.codSequencial = codSequencial;
 			this.nomSoftware = nomSoftware;
 			this.fabricante = fabricante;
 			this.versao = versao;
@@ -33,7 +35,15 @@ public class Software {
 		public Software() {
 			super();
 		}
-	 public String getNomSoftware() {
+		
+	public int getCodSequencial() {
+		return codSequencial;
+	}
+	public void setCodSequenciale(int codSequencial) {
+		this.codSequencial = codSequencial;
+	}	
+		
+	public String getNomSoftware() {
 		return nomSoftware;
 	}
 	public void setNomSoftware(String nomSoftware) {
