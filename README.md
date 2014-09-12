@@ -7,6 +7,8 @@ Integrantes
 
 Fabiana de Souza - RA 
 
-Ruan Ferreira da Silva - RA:5660120606
+Ruan Ferreira da Silva - RA: 5660120606
 
 Vinícius Andrade RA: 41576
+
+Tayson Rangel de Souza RA: 5614124135 
