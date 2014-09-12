@@ -2,12 +2,12 @@ package br.com.deltaz123.negocio;
 
 
 public class Equipamento {
-	String	codEquipamento;
-	String	codPatrimonial;
-	String	tipo;
-	String	accesorio;
-        String	tipoUso;
-	String	tipoRede;
+	private String	codEquipamento;
+	private String	codPatrimonial;
+	private String	tipo;
+	private String	accesorio;
+        private String	tipoUso;
+	private String	tipoRede;
         
 	public Equipamento(String codEquipamento, String codPatrimonial,
 			String tipo, String accesorio, String tipo_uso, String tipoRede) {
