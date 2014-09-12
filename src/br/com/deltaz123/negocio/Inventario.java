@@ -14,4 +14,6 @@ public class Inventario {
     //Declaração de atributos
     //private Equipamento equipamento;
     //private Software software;
+    
+    
 }
