@@ -15,6 +15,10 @@ public class Inventario {
     private Equipamento equipamento;
     private Software software;
     
+    public void listarSoftwareInstalado(){
+        
+    }
+    
     //Declaração de Getters e Setters
     public Equipamento getEquipamento(){
         return equipamento;
