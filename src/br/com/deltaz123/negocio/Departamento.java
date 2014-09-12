@@ -8,7 +8,7 @@ package br.com.deltaz123.negocio;
 
 /**
  *
- * @author DeltaZ123TI
+ * @author Ruan
  */
 public class Departamento {
     //Declaração de atributos
