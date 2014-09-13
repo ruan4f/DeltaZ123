@@ -13,6 +13,8 @@ Vinícius Andrade RA: 41576
 
 Tayson Rangel de Souza RA: 5614124135 
 
+José Roberto do Patrocínio RA: 6200183927 
+
 
 
 
