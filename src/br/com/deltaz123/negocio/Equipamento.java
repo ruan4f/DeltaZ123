@@ -1,7 +1,7 @@
 package br.com.deltaz123.negocio;
 
 
-public class Equipamento {
+public abstract class Equipamento {
 	private String	codEquipamento;
 	private String	codPatrimonial;
 	private String	tipo;
@@ -9,19 +9,7 @@ public class Equipamento {
         private String	tipoUso;
 	private String	tipoRede;
         
-	public Equipamento(String codEquipamento, String codPatrimonial,
-			String tipo, String accesorio, String tipo_uso, String tipoRede) {
-		super();
-		this.codEquipamento = codEquipamento;
-		this.codPatrimonial = codPatrimonial;
-		this.tipo = tipo;
-		this.accesorio = accesorio;
-		this.tipoUso = tipo_uso;
-		this.tipoRede = tipoRede;
-	}
-	public Equipamento() {
-		super();
-	}
+	
 	public String getCodEquipamento() {
 		return codEquipamento;
 	}
@@ -46,10 +34,10 @@ public class Equipamento {
 	public void setAccesorio(String accesorio) {
 		this.accesorio = accesorio;
 	}
-	public String getTipo_uso() {
+	public String getTipoUso() {
 		return tipoUso;
 	}
-	public void setTipo_uso(String tipoUso) {
+	public void setTipoUso(String tipoUso) {
 		this.tipoUso = tipoUso;
 	}
 	public String getTipoRede() {
