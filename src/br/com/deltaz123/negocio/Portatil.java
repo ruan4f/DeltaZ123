@@ -10,7 +10,7 @@ package br.com.deltaz123.negocio;
  * @author Ruan
  */
 public class Portatil extends Equipamento{
-  public Fixo (String codEquipamento, String codPatrimonial,
+  public Portatil (String codEquipamento, String codPatrimonial,
 			String tipo, String accesorio, String tipoUso, String tipoRede) {
 		super();
 		this.setCodEquipamento(codEquipamento);
