@@ -153,9 +153,7 @@ public class fmPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
-        fmDepartamento departamento = new fmDepartamento();
-        jDesktopPane1.add(departamento);
-        departamento.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
@@ -174,23 +172,21 @@ public class fmPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
-        fmUsuario usuario = new fmUsuario();
-        jDesktopPane1.add(usuario);
-        usuario.setVisible(true);
+        
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
-        fmSoftware software = new fmSoftware();
-        jDesktopPane1.add(software);
-        software.setVisible(true);
+        fmCadSoftware cadastroSoftware = new fmCadSoftware();
+        
+        cadastroSoftware.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
-        fmEquipamento equipamento = new fmEquipamento();
-        jDesktopPane1.add(equipamento);
-        equipamento.setVisible(true);
+        fmCadEquipamento cadastroEquipamento = new fmCadEquipamento();
+        
+        cadastroEquipamento.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private String mostrarData(){
