@@ -9,7 +9,7 @@ public abstract class Equipamento {
         private String	tipoUso;
 	private String	tipoRede;
         
-	
+        
 	public String getCodEquipamento() {
 		return codEquipamento;
 	}
