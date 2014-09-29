@@ -19,9 +19,9 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     private String fabricante;
     private String versao;
     private String numNotaFiscal;
-    private Date dataEmissaoNotaFiscal;
+    private String dataEmissaoNotaFiscal;
     private String chaveDeLicenca;
-    private Date dataExpiracaoLicenca;
+    private String dataExpiracaoLicenca;
     private String classificacao;
     
     
@@ -37,6 +37,17 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
         if(evento.getSource() == btCadastrar){
             
         }
+    }
+    
+    public void cadastrarSoftware(){
+        setNome(txtNomeSoftware.getText());
+        setFabricante(txtFabricante.getText());
+        setVersao(txtVersaoSoftware.getText());
+        setNumNotaFiscal(txtCodNotaFiscal.getText());
+        setDataEmissaoNotaFiscal(txtDataNotaFiscal.getText());
+        setChaveDeLicenca(txtChaveLicença.getText());
+        setDataExpiracaoLicenca(txtDataExpiracaoLicenca.getText());
+        setClassificacao(txtClassificacaoSoftware.getText());
     }
 
     /**
@@ -337,14 +348,14 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     /**
      * @return the dataEmissaoNotaFiscal
      */
-    public Date getDataEmissaoNotaFiscal() {
+    public String getDataEmissaoNotaFiscal() {
         return dataEmissaoNotaFiscal;
     }
 
     /**
      * @param dataEmissaoNotaFiscal the dataEmissaoNotaFiscal to set
      */
-    public void setDataEmissaoNotaFiscal(Date dataEmissaoNotaFiscal) {
+    public void setDataEmissaoNotaFiscal(String dataEmissaoNotaFiscal) {
         this.dataEmissaoNotaFiscal = dataEmissaoNotaFiscal;
     }
 
@@ -365,14 +376,14 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     /**
      * @return the dataExpiracaoLicenca
      */
-    public Date getDataExpiracaoLicenca() {
+    public String getDataExpiracaoLicenca() {
         return dataExpiracaoLicenca;
     }
 
     /**
      * @param dataExpiracaoLicenca the dataExpiracaoLicenca to set
      */
-    public void setDataExpiracaoLicenca(Date dataExpiracaoLicenca) {
+    public void setDataExpiracaoLicenca(String dataExpiracaoLicenca) {
         this.dataExpiracaoLicenca = dataExpiracaoLicenca;
     }
 
