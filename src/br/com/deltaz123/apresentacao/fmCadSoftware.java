@@ -7,13 +7,24 @@ package br.com.deltaz123.apresentacao;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Date;
 
 /**
  *
  * @author Ruan
  */
 public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
-
+    //Declaração de atributos
+    private String nome;
+    private String fabricante;
+    private String versao;
+    private String numNotaFiscal;
+    private Date dataEmissaoNotaFiscal;
+    private String chaveDeLicenca;
+    private Date dataExpiracaoLicenca;
+    private String classificacao;
+    
+    
     /**
      * Creates new form fmCadSoftware
      */
@@ -205,6 +216,7 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -264,4 +276,117 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField txtNomeSoftware;
     private javax.swing.JTextField txtVersaoSoftware;
     // End of variables declaration//GEN-END:variables
+
+    //Declaração de Getters e Setters
+    /**
+     * @return the nome
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     * @param nome the nome to set
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * @return the fabricante
+     */
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    /**
+     * @param fabricante the fabricante to set
+     */
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    /**
+     * @return the versao
+     */
+    public String getVersao() {
+        return versao;
+    }
+
+    /**
+     * @param versao the versao to set
+     */
+    public void setVersao(String versao) {
+        this.versao = versao;
+    }
+
+    /**
+     * @return the numNotaFiscal
+     */
+    public String getNumNotaFiscal() {
+        return numNotaFiscal;
+    }
+
+    /**
+     * @param numNotaFiscal the numNotaFiscal to set
+     */
+    public void setNumNotaFiscal(String numNotaFiscal) {
+        this.numNotaFiscal = numNotaFiscal;
+    }
+
+    /**
+     * @return the dataEmissaoNotaFiscal
+     */
+    public Date getDataEmissaoNotaFiscal() {
+        return dataEmissaoNotaFiscal;
+    }
+
+    /**
+     * @param dataEmissaoNotaFiscal the dataEmissaoNotaFiscal to set
+     */
+    public void setDataEmissaoNotaFiscal(Date dataEmissaoNotaFiscal) {
+        this.dataEmissaoNotaFiscal = dataEmissaoNotaFiscal;
+    }
+
+    /**
+     * @return the chaveDeLicenca
+     */
+    public String getChaveDeLicenca() {
+        return chaveDeLicenca;
+    }
+
+    /**
+     * @param chaveDeLicenca the chaveDeLicenca to set
+     */
+    public void setChaveDeLicenca(String chaveDeLicenca) {
+        this.chaveDeLicenca = chaveDeLicenca;
+    }
+
+    /**
+     * @return the dataExpiracaoLicenca
+     */
+    public Date getDataExpiracaoLicenca() {
+        return dataExpiracaoLicenca;
+    }
+
+    /**
+     * @param dataExpiracaoLicenca the dataExpiracaoLicenca to set
+     */
+    public void setDataExpiracaoLicenca(Date dataExpiracaoLicenca) {
+        this.dataExpiracaoLicenca = dataExpiracaoLicenca;
+    }
+
+    /**
+     * @return the classificacao
+     */
+    public String getClassificacao() {
+        return classificacao;
+    }
+
+    /**
+     * @param classificacao the classificacao to set
+     */
+    public void setClassificacao(String classificacao) {
+        this.classificacao = classificacao;
+    }
 }

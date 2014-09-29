@@ -204,6 +204,7 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
