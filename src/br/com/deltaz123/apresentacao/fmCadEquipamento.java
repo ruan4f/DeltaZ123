@@ -37,6 +37,19 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
         }
     }
     
+    public void cadastrarEquipamento(){
+        setCodigo(Integer.parseInt(txtCodEquipamento.getText()));
+        setCodigoPatrimonial(Integer.parseInt(txtCodPatrimonial.getText()));
+        Object tipoSelecionado = cbTipo.getSelectedItem();
+        setTipo(tipoSelecionado.toString());
+        setAcessorio(txtAcessorio.getText());
+        Object usoSelecionado = cbUso.getSelectedItem();
+        setUso(usoSelecionado.toString());
+        Object redeSelecionado = cbTipoRede.getSelectedItem();
+        setRede(redeSelecionado.toString());
+        setMatriculaUsuario(Integer.parseInt(txtMatUsuario.getText()));
+    }
+    
     
 
     /**
@@ -58,13 +71,11 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
         jLabel7 = new javax.swing.JLabel();
         txtCodEquipamento = new javax.swing.JTextField();
         txtCodPatrimonial = new javax.swing.JTextField();
-        rbTipoFixo = new javax.swing.JRadioButton();
-        rbTipoPortatil = new javax.swing.JRadioButton();
         txtAcessorio = new javax.swing.JTextField();
-        rbUsoColetivo = new javax.swing.JRadioButton();
-        rbUsoIndividual = new javax.swing.JRadioButton();
         cbTipoRede = new javax.swing.JComboBox();
         txtMatUsuario = new javax.swing.JTextField();
+        cbTipo = new javax.swing.JComboBox();
+        cbUso = new javax.swing.JComboBox();
         jPanel2 = new javax.swing.JPanel();
         btCadastrar = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
@@ -87,15 +98,11 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
 
         jLabel7.setText("Matrícula Usuário");
 
-        rbTipoFixo.setText("Fixo");
-
-        rbTipoPortatil.setText("Portátil");
-
-        rbUsoColetivo.setText("Coletivo");
-
-        rbUsoIndividual.setText("Individual");
-
         cbTipoRede.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Wirelles", "Rádio Frequência", "Fixo" }));
+
+        cbTipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        cbUso.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -112,21 +119,16 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
                     .addComponent(jLabel6)
                     .addComponent(jLabel7))
                 .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cbTipoRede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(rbUsoColetivo)
-                        .addGap(18, 18, 18)
-                        .addComponent(rbUsoIndividual))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(rbTipoFixo)
-                        .addGap(18, 18, 18)
-                        .addComponent(rbTipoPortatil))
-                    .addComponent(txtCodEquipamento)
-                    .addComponent(txtCodPatrimonial)
-                    .addComponent(txtAcessorio)
-                    .addComponent(txtMatUsuario))
-                .addContainerGap(101, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(cbTipoRede, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtCodEquipamento, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                        .addComponent(txtCodPatrimonial)
+                        .addComponent(txtAcessorio)
+                        .addComponent(txtMatUsuario))
+                    .addComponent(cbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbUso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,8 +144,7 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(rbTipoFixo)
-                    .addComponent(rbTipoPortatil))
+                    .addComponent(cbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -151,8 +152,7 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(rbUsoColetivo)
-                    .addComponent(rbUsoIndividual))
+                    .addComponent(cbUso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -177,7 +177,7 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btCadastrar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
                 .addComponent(btLimpar)
                 .addGap(80, 80, 80))
         );
@@ -255,7 +255,9 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrar;
     private javax.swing.JButton btLimpar;
+    private javax.swing.JComboBox cbTipo;
     private javax.swing.JComboBox cbTipoRede;
+    private javax.swing.JComboBox cbUso;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -265,10 +267,6 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JRadioButton rbTipoFixo;
-    private javax.swing.JRadioButton rbTipoPortatil;
-    private javax.swing.JRadioButton rbUsoColetivo;
-    private javax.swing.JRadioButton rbUsoIndividual;
     private javax.swing.JTextField txtAcessorio;
     private javax.swing.JTextField txtCodEquipamento;
     private javax.swing.JTextField txtCodPatrimonial;

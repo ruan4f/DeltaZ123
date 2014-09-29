@@ -35,7 +35,7 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     
     public void actionPerformed(ActionEvent evento){
         if(evento.getSource() == btCadastrar){
-            
+            cadastrarSoftware();
         }
     }
     

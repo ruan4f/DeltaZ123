@@ -70,24 +70,18 @@
                       <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="cbTipoRede" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" attributes="0">
-                          <Component id="rbUsoColetivo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="rbUsoIndividual" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="cbTipoRede" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCodEquipamento" alignment="0" pref="154" max="32767" attributes="0"/>
+                          <Component id="txtCodPatrimonial" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtAcessorio" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtMatUsuario" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <Group type="102" attributes="0">
-                          <Component id="rbTipoFixo" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="rbTipoPortatil" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Component id="txtCodEquipamento" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtCodPatrimonial" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtAcessorio" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtMatUsuario" alignment="0" max="32767" attributes="0"/>
+                      <Component id="cbTipo" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbUso" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="101" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -107,8 +101,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbTipoFixo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbTipoPortatil" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbTipo" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -118,8 +111,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbUsoColetivo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbUsoIndividual" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="cbUso" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -176,27 +168,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtCodPatrimonial">
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbTipoFixo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Fixo"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="rbTipoPortatil">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Port&#xe1;til"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="txtAcessorio">
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="rbUsoColetivo">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Coletivo"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JRadioButton" name="rbUsoIndividual">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Individual"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JComboBox" name="cbTipoRede">
           <Properties>
@@ -210,6 +182,30 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtMatUsuario">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbTipo">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="cbUso">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="Item 1"/>
+                <StringItem index="1" value="Item 2"/>
+                <StringItem index="2" value="Item 3"/>
+                <StringItem index="3" value="Item 4"/>
+              </StringArray>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
@@ -228,7 +224,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btCadastrar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="142" max="32767" attributes="0"/>
                   <Component id="btLimpar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
               </Group>
