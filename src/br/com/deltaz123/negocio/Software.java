@@ -23,7 +23,8 @@ public class Software {
 	private String chaveLicenca;
 	private Date dataEspiracao;
 	private String classificacao;
-	 public Software(int codSequencial, String nomSoftware, String fabricante, String versao,
+	
+	public Software(int codSequencial, String nomeSoftware, String fabricante, String versao,
 				String nota_fiscal, Date dataNota, String chaveLicenca,
 				Date dataEspiracao, String classificacao) {
 			super();
@@ -48,11 +49,19 @@ public class Software {
 		this.codSequencial = codSequencial;
 	}	
 		
+<<<<<<< HEAD
 	public String getNomSoftware() {
 		return nomeSoftware;
 	}
 	public void setNomSoftware(String nomSoftware) {
 		this.nomeSoftware = nomSoftware;
+=======
+	public String getNomeSoftware() {
+		return nomSoftware;
+	}
+	public void setNomeSoftware(String nomSoftware) {
+		this.nomSoftware = nomSoftware;
+>>>>>>> origin/master
 	}
 	public String getFabricante() {
 		return fabricante;
@@ -101,17 +110,16 @@ public class Software {
 		
 	}
     public boolean verificaValidade(){  
-			//falsepara fora da validade e true para dentro da validade        
-		    boolean valido;  
-			Date data = new Date(System.currentTimeMillis()); // pega data atual
-		    if (data.before(this.getDataEspiracao())){  
-		          		        valido = true;  
-		    }  
-		    else if (data.after(this.getDataEspiracao()))  
+		//falsepara fora da validade e true para dentro da validade        
+		boolean valido;  
+		Date data = new Date(System.currentTimeMillis()); // pega data atual
+		if (data.before(this.getDataEspiracao())){  
+			valido = true;  
+		} else if (data.after(this.getDataEspiracao()))  
 		        valido = false;  
-		    else  
+		  else  
 		    	valido = true;  	      
-		    return valido;  
+		  return valido;  
 		}  
 	
 	

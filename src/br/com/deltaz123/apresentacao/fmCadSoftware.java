@@ -14,6 +14,7 @@ import java.util.Date;
  * @author Ruan
  */
 public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
+<<<<<<< HEAD
     //Declaração de atributos
     private String nome;
     private String fabricante;
@@ -25,6 +26,8 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     private String classificacao;
     
     
+=======
+>>>>>>> origin/master
     /**
      * Creates new form fmCadSoftware
      */
@@ -287,6 +290,7 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField txtNomeSoftware;
     private javax.swing.JTextField txtVersaoSoftware;
     // End of variables declaration//GEN-END:variables
+<<<<<<< HEAD
 
     //Declaração de Getters e Setters
     /**
@@ -400,4 +404,6 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     public void setClassificacao(String classificacao) {
         this.classificacao = classificacao;
     }
+=======
+>>>>>>> origin/master
 }
