@@ -18,17 +18,6 @@ import javax.swing.JTextField;
  */
 public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
 
-    //Declaração de atributos
-    private String nome;
-    private String fabricante;
-    private String versao;
-    private String numNotaFiscal;
-    private String dataEmissaoNotaFiscal;
-    private String chaveDeLicenca;
-    private String dataExpiracaoLicenca;
-    private String classificacao;
-    
-
     /**
      * Creates new form fmCadSoftware
      */
