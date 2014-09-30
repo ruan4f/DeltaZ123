@@ -9,13 +9,14 @@ public abstract class Equipamento {
     private String acesorio;
     private String tipoUso;
     private String tipoRede;
+    private String matUsuario;
 
     //Construtor padrão
     public Equipamento(){
         super();
     }
     
-    public Equipamento(String codEquipamento, String codPatrimonial, String tipo, String acesorio, String tipoUso, String tipoRede) {
+    public Equipamento(String codEquipamento, String codPatrimonial, String tipo, String acesorio, String tipoUso, String tipoRede, String matUsuario) {
         super();
         this.codEquipamento = codEquipamento;
         this.codPatrimonial = codPatrimonial;
@@ -23,12 +24,9 @@ public abstract class Equipamento {
         this.acesorio = acesorio;
         this.tipoUso = tipoUso;
         this.tipoRede = tipoRede;
+        this.matUsuario = matUsuario;
     }
     
-    public void alterarDados(){
-        
-    }
-
     /**
      * @return the codEquipamento
      */
@@ -111,6 +109,20 @@ public abstract class Equipamento {
      */
     public void setTipoRede(String tipoRede) {
         this.tipoRede = tipoRede;
+    }
+
+    /**
+     * @return the matUsuario
+     */
+    public String getMatUsuario() {
+        return matUsuario;
+    }
+
+    /**
+     * @param matUsuario the matUsuario to set
+     */
+    public void setMatUsuario(String matUsuario) {
+        this.matUsuario = matUsuario;
     }
         
         

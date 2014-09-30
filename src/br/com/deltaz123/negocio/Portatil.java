@@ -11,8 +11,9 @@ package br.com.deltaz123.negocio;
  */
 public class Portatil extends Equipamento{
 
-    public Portatil(String codEquipamento, String codPatrimonial, String tipo, String acesorio, String tipoUso, String tipoRede) {
-        super(codEquipamento, codPatrimonial, tipo, acesorio, tipoUso, tipoRede);
+    public Portatil(String codEquipamento, String codPatrimonial, String tipo, String acesorio, String tipoUso, String tipoRede, String matUsuario) {
+        super(codEquipamento, codPatrimonial, tipo, acesorio, tipoUso, tipoRede, matUsuario);
+        
     }
     
 }

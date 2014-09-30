@@ -40,14 +40,23 @@ public class Software {
         this.dataEspiracao = dataEspiracao;
         this.classificacao = classificacao;
     }
-    
-    public void alterarDados(){
         
+    public void cadastrarDados(int codSequencial, String nomeSoftware, String fabricante, String versao, String nota_fiscal, Date dataNota, String chaveLicenca,Date dataEspiracao, String classificacao){
+        this.codSequencial = codSequencial;
+        this.nomeSoftware = nomeSoftware;
+        this.fabricante = fabricante;
+        this.versao = versao;
+        this.nota_fiscal = nota_fiscal;
+        this.dataNota = dataNota;
+        this.chaveLicenca = chaveLicenca;
+        this.dataEspiracao = dataEspiracao;
+        this.classificacao = classificacao;
     }
 
     public void backUp(){
 		
     }
+    
     public boolean verificaValidade(){  
 	//falsepara fora da validade e true para dentro da validade        
 	boolean valido;  

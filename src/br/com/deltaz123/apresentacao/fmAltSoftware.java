@@ -5,51 +5,26 @@
  */
 package br.com.deltaz123.apresentacao;
 
-
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 
 /**
  *
- * @author Ruan
+ * @author Ligtelecom
  */
-public class fmCadSoftware extends JFrame implements ActionListener{
+public class fmAltSoftware extends javax.swing.JFrame {
 
+    
+    
     /**
-     * Creates new form fmCadSoftware
+     * Creates new form fmAltSoftware
      */
-    public fmCadSoftware() {
+    public fmAltSoftware() {
         initComponents();
-        btCadastrar.addActionListener(this);
     }
-    
-    @Override
-    public void actionPerformed(ActionEvent evento){
-        if(evento.getSource() == btCadastrar){           
-            
-        }
-    }
-    
-    public static Date formataData(String data) throws ParseException{   
-        if (data == null || data.equals(""))  
-            return null;  
-          
-        Date date;  
-         
-        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
-        date = (Date)formatter.parse(data);  
-         
-        return date;  
-    } 
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -77,10 +52,12 @@ public class fmCadSoftware extends JFrame implements ActionListener{
         txtDataNotaFiscal = new javax.swing.JFormattedTextField();
         txtDataExpiracaoLicenca = new javax.swing.JFormattedTextField();
         jPanel2 = new javax.swing.JPanel();
-        btCadastrar = new javax.swing.JButton();
+        btAlterar = new javax.swing.JButton();
+        btExibir = new javax.swing.JButton();
+        btExcluir = new javax.swing.JButton();
         btLimpar = new javax.swing.JButton();
 
-        setTitle("Cadastro de Software");
+        setTitle("Altera Software");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -113,36 +90,38 @@ public class fmCadSoftware extends JFrame implements ActionListener{
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabel6))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(17, 17, 17)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtChaveLicença, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNomeSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(txtFabricante)
-                                .addComponent(txtDataNotaFiscal, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(txtCodNotaFiscal, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(txtVersaoSoftware))
-                                    .addGap(82, 82, 82)))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtDataNotaFiscal, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                            .addComponent(txtChaveLicença)
+                            .addComponent(txtFabricante)
+                            .addComponent(txtNomeSoftware)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtClassificacaoSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDataExpiracaoLicenca, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtDataExpiracaoLicenca, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtClassificacaoSoftware, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(txtVersaoSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                            .addGap(17, 17, 17)
+                            .addComponent(txtCodNotaFiscal, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -185,39 +164,44 @@ public class fmCadSoftware extends JFrame implements ActionListener{
 
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        btCadastrar.setText("Cadastrar");
-        btCadastrar.addActionListener(new java.awt.event.ActionListener() {
+        btAlterar.setText("Alterar");
+
+        btExibir.setText("Exibir");
+        btExibir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btCadastrarActionPerformed(evt);
+                btExibirActionPerformed(evt);
             }
         });
 
+        btExcluir.setText("Excluir");
+
         btLimpar.setText("Limpar");
-        btLimpar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btLimparActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(btCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43))
+                .addContainerGap()
+                .addComponent(btExibir)
+                .addGap(18, 18, 18)
+                .addComponent(btAlterar)
+                .addGap(18, 18, 18)
+                .addComponent(btExcluir)
+                .addGap(18, 18, 18)
+                .addComponent(btLimpar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btCadastrar)
+                    .addComponent(btAlterar)
+                    .addComponent(btExibir)
+                    .addComponent(btExcluir)
                     .addComponent(btLimpar))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -245,67 +229,18 @@ public class fmCadSoftware extends JFrame implements ActionListener{
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
+    private void btExibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirActionPerformed
         // TODO add your handling code here:
-        verificarCamposVazios();
-    }//GEN-LAST:event_btCadastrarActionPerformed
+        
+    }//GEN-LAST:event_btExibirActionPerformed
 
-    private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
-        // TODO add your handling code here:
-        Component components[] = jPanel1.getComponents();  
-        for (Component component : components)  
-        {  
-            if (component instanceof JTextField)  
-            {  
-                ((JTextField)component).setText(null);  
-            }  
-        } 
-        txtNomeSoftware.requestFocus();
-    }//GEN-LAST:event_btLimparActionPerformed
-
-    //Método que verifica se os campos estão vazios
-    public void verificarCamposVazios(){
-        if(txtNomeSoftware.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Campo Nome vazio. Por favor preencha novamente");
-            txtNomeSoftware.requestFocus();
-        }
+    public String converteDateToString(Date data){
+        DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        formatter.setLenient(false);
+        String str = formatter.format(data);
         
-        if(txtFabricante.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Campo Fabricante vazio. Por favor preencha novamente");
-            txtFabricante.requestFocus();
-        }
-        
-        if(txtVersaoSoftware.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Campo Versão vazio. Por favor preencha novamente");
-            txtVersaoSoftware.requestFocus();
-        }
-        
-        if(txtCodNotaFiscal.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Campo Nota Fiscal vazio. Por favor preencha novamente");
-            txtCodNotaFiscal.requestFocus();
-        }
-        
-        if(txtDataNotaFiscal.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Campo Data da Nota vazio. Por favor preencha novamente");
-            txtDataNotaFiscal.requestFocus();
-        }
-        
-        if(txtChaveLicença.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Campo Chave de Licença vazio. Por favor preencha novamente");
-            txtChaveLicença.requestFocus();
-        }
-        
-        if(txtDataExpiracaoLicenca.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Campo Data de Expiração vazio. Por favor preencha novamente");
-            txtDataExpiracaoLicenca.requestFocus();
-        }
-        
-        if(txtClassificacaoSoftware.getText().isEmpty()){
-            JOptionPane.showMessageDialog(null, "Campo Classificação vazio. Por favor preencha novamente");
-            txtClassificacaoSoftware.requestFocus();
-        }
+        return str;
     }
-    
     /**
      * @param args the command line arguments
      */
@@ -323,26 +258,28 @@ public class fmCadSoftware extends JFrame implements ActionListener{
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(fmCadSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(fmAltSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(fmCadSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(fmAltSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(fmCadSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(fmAltSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(fmCadSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(fmAltSoftware.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new fmCadSoftware().setVisible(true);
+                new fmAltSoftware().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btCadastrar;
+    private javax.swing.JButton btAlterar;
+    private javax.swing.JButton btExcluir;
+    private javax.swing.JButton btExibir;
     private javax.swing.JButton btLimpar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
