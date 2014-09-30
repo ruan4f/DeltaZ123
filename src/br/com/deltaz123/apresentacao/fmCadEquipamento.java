@@ -25,8 +25,10 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
     }
     
     public void actionPerformed(ActionEvent evento){
+        //Declaração de atributos
+        int contador = 0;
         if(evento.getSource() == btCadastrar){
-            
+                        
         }
     }
     
