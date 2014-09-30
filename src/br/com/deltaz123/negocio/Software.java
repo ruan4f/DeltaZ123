@@ -15,7 +15,7 @@ import java.util.Date;
  */
 public class Software {
 	private int codSequencial;
-	private String nomSoftware ;
+	private String nomeSoftware ;
 	private String fabricante ;
 	private String versao;
 	private String nota_fiscal ;
@@ -28,7 +28,7 @@ public class Software {
 				Date dataEspiracao, String classificacao) {
 			super();
 			this.codSequencial = codSequencial;
-			this.nomSoftware = nomSoftware;
+			this.nomeSoftware = nomSoftware;
 			this.fabricante = fabricante;
 			this.versao = versao;
 			this.nota_fiscal = nota_fiscal;
@@ -49,10 +49,10 @@ public class Software {
 	}	
 		
 	public String getNomSoftware() {
-		return nomSoftware;
+		return nomeSoftware;
 	}
 	public void setNomSoftware(String nomSoftware) {
-		this.nomSoftware = nomSoftware;
+		this.nomeSoftware = nomSoftware;
 	}
 	public String getFabricante() {
 		return fabricante;

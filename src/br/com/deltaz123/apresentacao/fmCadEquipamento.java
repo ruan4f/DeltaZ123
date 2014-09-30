@@ -5,6 +5,8 @@
  */
 package br.com.deltaz123.apresentacao;
 
+import br.com.deltaz123.negocio.Equipamento;
+import br.com.deltaz123.negocio.Software;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,15 +15,6 @@ import java.awt.event.ActionListener;
  * @author Ruan
  */
 public class fmCadEquipamento extends javax.swing.JFrame implements ActionListener{
-
-    //Declaração de atributos
-    private int codigo;
-    private int codigoPatrimonial;
-    private String tipo;
-    private String acessorio;
-    private String uso;
-    private String rede;
-    private int matriculaUsuario;
     
     /**
      * Creates new form fmCodEquipamento
@@ -38,7 +31,8 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
     }
     
     public void cadastrarEquipamento(){
-        setCodigo(Integer.parseInt(txtCodEquipamento.getText()));
+        Equipamento novoEquipamento = new Equipamento();
+        novoSoftware.setCodSequenciale(Integer.parseInt(txtCodEquipamento.getText()));
         setCodigoPatrimonial(Integer.parseInt(txtCodPatrimonial.getText()));
         Object tipoSelecionado = cbTipo.getSelectedItem();
         setTipo(tipoSelecionado.toString());
@@ -273,101 +267,4 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
     private javax.swing.JTextField txtMatUsuario;
     // End of variables declaration//GEN-END:variables
 
-    /**
-     * @return the codigo
-     */
-    public int getCodigo() {
-        return codigo;
-    }
-
-    /**
-     * @param codigo the codigo to set
-     */
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-    /**
-     * @return the codigoPatrimonial
-     */
-    public int getCodigoPatrimonial() {
-        return codigoPatrimonial;
-    }
-
-    /**
-     * @param codigoPatrimonial the codigoPatrimonial to set
-     */
-    public void setCodigoPatrimonial(int codigoPatrimonial) {
-        this.codigoPatrimonial = codigoPatrimonial;
-    }
-
-    /**
-     * @return the tipo
-     */
-    public String getTipo() {
-        return tipo;
-    }
-
-    /**
-     * @param tipo the tipo to set
-     */
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    /**
-     * @return the acessorio
-     */
-    public String getAcessorio() {
-        return acessorio;
-    }
-
-    /**
-     * @param acessorio the acessorio to set
-     */
-    public void setAcessorio(String acessorio) {
-        this.acessorio = acessorio;
-    }
-
-    /**
-     * @return the uso
-     */
-    public String getUso() {
-        return uso;
-    }
-
-    /**
-     * @param uso the uso to set
-     */
-    public void setUso(String uso) {
-        this.uso = uso;
-    }
-
-    /**
-     * @return the rede
-     */
-    public String getRede() {
-        return rede;
-    }
-
-    /**
-     * @param rede the rede to set
-     */
-    public void setRede(String rede) {
-        this.rede = rede;
-    }
-
-    /**
-     * @return the matriculaUsuario
-     */
-    public int getMatriculaUsuario() {
-        return matriculaUsuario;
-    }
-
-    /**
-     * @param matriculaUsuario the matriculaUsuario to set
-     */
-    public void setMatriculaUsuario(int matriculaUsuario) {
-        this.matriculaUsuario = matriculaUsuario;
-    }
 }
