@@ -8,7 +8,7 @@ package br.com.deltaz123.apresentacao;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Date;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -16,7 +16,7 @@ import javax.swing.JTextField;
  *
  * @author Ruan
  */
-public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
+public class fmCadSoftware extends JFrame implements ActionListener{
 
     /**
      * Creates new form fmCadSoftware
@@ -26,6 +26,7 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
         btCadastrar.addActionListener(this);
     }
     
+    @Override
     public void actionPerformed(ActionEvent evento){
         if(evento.getSource() == btCadastrar){
             

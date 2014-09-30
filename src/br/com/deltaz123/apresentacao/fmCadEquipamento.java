@@ -6,17 +6,17 @@
 package br.com.deltaz123.apresentacao;
 
 import br.com.deltaz123.negocio.Equipamento;
-import br.com.deltaz123.negocio.Software;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JFrame;
 import javax.swing.JTextField;
 
 /**
  *
  * @author Ruan
  */
-public class fmCadEquipamento extends javax.swing.JFrame implements ActionListener{
+public class fmCadEquipamento extends JFrame implements ActionListener{
     
     /**
      * Creates new form fmCodEquipamento
@@ -26,6 +26,7 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
         btCadastrar.addActionListener(this);
     }
     
+    @Override
     public void actionPerformed(ActionEvent evento){
         //Declaração de atributos
         int contador = 0;
