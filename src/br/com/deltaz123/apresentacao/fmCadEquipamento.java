@@ -30,22 +30,6 @@ public class fmCadEquipamento extends javax.swing.JFrame implements ActionListen
         }
     }
     
-    public void cadastrarEquipamento(){
-        Equipamento novoEquipamento = new Equipamento();
-        novoSoftware.setCodSequenciale(Integer.parseInt(txtCodEquipamento.getText()));
-        setCodigoPatrimonial(Integer.parseInt(txtCodPatrimonial.getText()));
-        Object tipoSelecionado = cbTipo.getSelectedItem();
-        setTipo(tipoSelecionado.toString());
-        setAcessorio(txtAcessorio.getText());
-        Object usoSelecionado = cbUso.getSelectedItem();
-        setUso(usoSelecionado.toString());
-        Object redeSelecionado = cbTipoRede.getSelectedItem();
-        setRede(redeSelecionado.toString());
-        setMatriculaUsuario(Integer.parseInt(txtMatUsuario.getText()));
-    }
-    
-    
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -5,9 +5,13 @@ public abstract class Equipamento {
 	private String	codEquipamento;
 	private String	codPatrimonial;
 	private String	tipo;
-	private String	accesorio;
+	private String	acesorio;
         private String	tipoUso;
 	private String	tipoRede;
+        
+        public void cadastrarEquipamento(){
+            
+        }
         
         
 	public String getCodEquipamento() {
@@ -28,11 +32,11 @@ public abstract class Equipamento {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	public String getAccesorio() {
-		return accesorio;
+	public String getAcesorio() {
+		return acesorio;
 	}
-	public void setAccesorio(String accesorio) {
-		this.accesorio = accesorio;
+	public void setAcesorio(String accesorio) {
+		this.acesorio = accesorio;
 	}
 	public String getTipoUso() {
 		return tipoUso;

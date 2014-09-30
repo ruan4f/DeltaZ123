@@ -24,44 +24,39 @@ public class Software {
 	private Date dataEspiracao;
 	private String classificacao;
 	
+        //Construtor padrão
+	public Software() {
+		super();
+	}
+        
 	public Software(int codSequencial, String nomeSoftware, String fabricante, String versao,
-				String nota_fiscal, Date dataNota, String chaveLicenca,
-				Date dataEspiracao, String classificacao) {
-			super();
-			this.codSequencial = codSequencial;
-			this.nomeSoftware = nomSoftware;
-			this.fabricante = fabricante;
-			this.versao = versao;
-			this.nota_fiscal = nota_fiscal;
-			this.dataNota = dataNota;
-			this.chaveLicenca = chaveLicenca;
-			this.dataEspiracao = dataEspiracao;
-			this.classificacao = classificacao;
-		}
-		public Software() {
-			super();
-		}
-		
+	String nota_fiscal, Date dataNota, String chaveLicenca,Date dataEspiracao, String classificacao) {
+            super();
+            this.codSequencial = codSequencial;
+            this.nomeSoftware = nomeSoftware;
+            this.fabricante = fabricante;
+            this.versao = versao;
+            this.nota_fiscal = nota_fiscal;
+            this.dataNota = dataNota;
+            this.chaveLicenca = chaveLicenca;
+            this.dataEspiracao = dataEspiracao;
+            this.classificacao = classificacao;
+	}
+        		
 	public int getCodSequencial() {
 		return codSequencial;
 	}
 	public void setCodSequenciale(int codSequencial) {
 		this.codSequencial = codSequencial;
 	}	
-		
-<<<<<<< HEAD
+
 	public String getNomSoftware() {
 		return nomeSoftware;
 	}
-	public void setNomSoftware(String nomSoftware) {
-		this.nomeSoftware = nomSoftware;
-=======
-	public String getNomeSoftware() {
-		return nomSoftware;
-	}
+	
 	public void setNomeSoftware(String nomSoftware) {
-		this.nomSoftware = nomSoftware;
->>>>>>> origin/master
+		this.nomeSoftware = nomSoftware;
+
 	}
 	public String getFabricante() {
 		return fabricante;

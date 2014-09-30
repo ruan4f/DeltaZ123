@@ -14,7 +14,7 @@ import java.util.Date;
  * @author Ruan
  */
 public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
-<<<<<<< HEAD
+
     //Declaração de atributos
     private String nome;
     private String fabricante;
@@ -25,9 +25,7 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     private String dataExpiracaoLicenca;
     private String classificacao;
     
-    
-=======
->>>>>>> origin/master
+
     /**
      * Creates new form fmCadSoftware
      */
@@ -38,21 +36,10 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     
     public void actionPerformed(ActionEvent evento){
         if(evento.getSource() == btCadastrar){
-            cadastrarSoftware();
+            
         }
     }
     
-    public void cadastrarSoftware(){
-        setNome(txtNomeSoftware.getText());
-        setFabricante(txtFabricante.getText());
-        setVersao(txtVersaoSoftware.getText());
-        setNumNotaFiscal(txtCodNotaFiscal.getText());
-        setDataEmissaoNotaFiscal(txtDataNotaFiscal.getText());
-        setChaveDeLicenca(txtChaveLicença.getText());
-        setDataExpiracaoLicenca(txtDataExpiracaoLicenca.getText());
-        setClassificacao(txtClassificacaoSoftware.getText());
-    }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -290,120 +277,4 @@ public class fmCadSoftware extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JTextField txtNomeSoftware;
     private javax.swing.JTextField txtVersaoSoftware;
     // End of variables declaration//GEN-END:variables
-<<<<<<< HEAD
-
-    //Declaração de Getters e Setters
-    /**
-     * @return the nome
-     */
-    public String getNome() {
-        return nome;
-    }
-
-    /**
-     * @param nome the nome to set
-     */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    /**
-     * @return the fabricante
-     */
-    public String getFabricante() {
-        return fabricante;
-    }
-
-    /**
-     * @param fabricante the fabricante to set
-     */
-    public void setFabricante(String fabricante) {
-        this.fabricante = fabricante;
-    }
-
-    /**
-     * @return the versao
-     */
-    public String getVersao() {
-        return versao;
-    }
-
-    /**
-     * @param versao the versao to set
-     */
-    public void setVersao(String versao) {
-        this.versao = versao;
-    }
-
-    /**
-     * @return the numNotaFiscal
-     */
-    public String getNumNotaFiscal() {
-        return numNotaFiscal;
-    }
-
-    /**
-     * @param numNotaFiscal the numNotaFiscal to set
-     */
-    public void setNumNotaFiscal(String numNotaFiscal) {
-        this.numNotaFiscal = numNotaFiscal;
-    }
-
-    /**
-     * @return the dataEmissaoNotaFiscal
-     */
-    public String getDataEmissaoNotaFiscal() {
-        return dataEmissaoNotaFiscal;
-    }
-
-    /**
-     * @param dataEmissaoNotaFiscal the dataEmissaoNotaFiscal to set
-     */
-    public void setDataEmissaoNotaFiscal(String dataEmissaoNotaFiscal) {
-        this.dataEmissaoNotaFiscal = dataEmissaoNotaFiscal;
-    }
-
-    /**
-     * @return the chaveDeLicenca
-     */
-    public String getChaveDeLicenca() {
-        return chaveDeLicenca;
-    }
-
-    /**
-     * @param chaveDeLicenca the chaveDeLicenca to set
-     */
-    public void setChaveDeLicenca(String chaveDeLicenca) {
-        this.chaveDeLicenca = chaveDeLicenca;
-    }
-
-    /**
-     * @return the dataExpiracaoLicenca
-     */
-    public String getDataExpiracaoLicenca() {
-        return dataExpiracaoLicenca;
-    }
-
-    /**
-     * @param dataExpiracaoLicenca the dataExpiracaoLicenca to set
-     */
-    public void setDataExpiracaoLicenca(String dataExpiracaoLicenca) {
-        this.dataExpiracaoLicenca = dataExpiracaoLicenca;
-    }
-
-    /**
-     * @return the classificacao
-     */
-    public String getClassificacao() {
-        return classificacao;
-    }
-
-    /**
-     * @param classificacao the classificacao to set
-     */
-    public void setClassificacao(String classificacao) {
-        this.classificacao = classificacao;
-    }
-=======
->>>>>>> origin/master
 }

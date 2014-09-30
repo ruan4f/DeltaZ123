@@ -11,12 +11,12 @@ package br.com.deltaz123.negocio;
  */
 public class Portatil extends Equipamento{
   public Portatil (String codEquipamento, String codPatrimonial,
-			String tipo, String accesorio, String tipoUso, String tipoRede) {
+			String tipo, String acesorio, String tipoUso, String tipoRede) {
 		super();
 		this.setCodEquipamento(codEquipamento);
 		this.setCodPatrimonial(codPatrimonial);
 		this.setTipo (tipo);
-		this.setAccesorio(accesorio);
+		this.setAcesorio(acesorio);
 		this.setTipoUso(tipoUso);
 		this.setTipoRede (tipoRede);
 	}
