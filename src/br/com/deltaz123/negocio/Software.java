@@ -40,6 +40,10 @@ public class Software {
         this.dataEspiracao = dataEspiracao;
         this.classificacao = classificacao;
     }
+    
+    public void alterarDados(){
+        
+    }
 
     public void backUp(){
 		

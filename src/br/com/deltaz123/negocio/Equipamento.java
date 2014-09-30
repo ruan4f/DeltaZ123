@@ -24,6 +24,10 @@ public abstract class Equipamento {
         this.tipoUso = tipoUso;
         this.tipoRede = tipoRede;
     }
+    
+    public void alterarDados(){
+        
+    }
 
     /**
      * @return the codEquipamento
