@@ -18,7 +18,6 @@ José Roberto do Patrocínio RA: 6200183927
 
 
 
-
 Detalhes sobre o diagrama de classe
 
 Os métodos de getters e setters nas classes, são referentes a todos os atributos das classes que possuem métodos get e set.
