@@ -5,10 +5,12 @@
  */
 package br.com.deltaz123.apresentacao;
 
+import br.com.deltaz123.negocio.Equipamento;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.Timer;
 
@@ -306,4 +308,5 @@ public class fmPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel laData;
     private javax.swing.JLabel laUsuario;
     // End of variables declaration//GEN-END:variables
+
 }

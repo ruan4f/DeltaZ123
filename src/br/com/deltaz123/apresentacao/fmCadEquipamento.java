@@ -7,6 +7,7 @@ package br.com.deltaz123.apresentacao;
 
 
 import br.com.deltaz123.negocio.Cadastro;
+
 import br.com.deltaz123.negocio.Equipamento;
 import br.com.deltaz123.negocio.Fixo;
 import br.com.deltaz123.negocio.Portatil;
@@ -256,12 +257,12 @@ public class fmCadEquipamento extends JFrame{
             case "Fixo":
                 Fixo fixo = new Fixo(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText());
                 cadastroEquipamento = new Cadastro(fixo);
-                JOptionPane.showMessageDialog(null, "Tamanho do meu cadastro "+cadastroEquipamento.index);
+                //JOptionPane.showMessageDialog(null, "Valor do id na tela principal ");
                 break;
             case "Portátil":
                 Portatil portatil = new Portatil(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText()) ;
                 cadastroEquipamento = new Cadastro(portatil);
-                JOptionPane.showMessageDialog(null, "Tamanho do meu cadastro "+cadastroEquipamento.index);
+                //JOptionPane.showMessageDialog(null, "Tamanho do meu cadastro "+cadastroEquipamento.index);
                 break;
         }
     }//GEN-LAST:event_btCadastrarActionPerformed
@@ -353,5 +354,6 @@ public class fmCadEquipamento extends JFrame{
     private javax.swing.JTextField txtCodPatrimonial;
     private javax.swing.JTextField txtMatUsuario;
     // End of variables declaration//GEN-END:variables
+
 
 }
