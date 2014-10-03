@@ -6,6 +6,7 @@
 package br.com.deltaz123.apresentacao;
 
 
+import br.com.deltaz123.negocio.Cadastro;
 import br.com.deltaz123.negocio.Fixo;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
@@ -19,7 +20,7 @@ import javax.swing.JTextField;
  */
 public class fmCadEquipamento extends JFrame implements ActionListener{ 
     
-    
+    Cadastro cadastro = new Cadastro();
     /**
      * Creates new form fmCodEquipamento
      */
@@ -266,11 +267,14 @@ public class fmCadEquipamento extends JFrame implements ActionListener{
 
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
         // TODO add your handling code here:
+       
         String tipo = (String) cbTipo.getSelectedItem();
         if(tipo == "Fixo"){
-        Fixo fixo = new Fixo(tipo, tipo, tipo, tipo, tipo, tipo, tipo);
+        Fixo fixo = new Fixo(txtCodEquipamento.getText(), tipo, tipo, tipo, tipo, tipo, tipo);
+         cadastro.setEquipamento(fixo);
         else if (tipo == "Portátil"){
-                Portátil ;
+                Portatil portatil = new Portatil() ;
+                cadastro.setEquipamento(portatil);
                 }
     }
     }//GEN-LAST:event_btCadastrarActionPerformed

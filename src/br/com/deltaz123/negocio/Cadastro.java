@@ -22,9 +22,9 @@ public class Cadastro{
         super();
     }
 
-    public Cadastro(Equipamento equipamento, Software software){
+    public Cadastro(Equipamento equipamento){
         super();
-        this.software = software;
+       
         this.equipamento[1] = equipamento;
     }
 
@@ -65,12 +65,12 @@ public class Cadastro{
     }
 
     //Declaração de Getters e Setters
-    public Equipamento getEquipamento(){
-        return equipamento;
+    public void getEquipamento(){
+     
     }
 
     public void setEquipamento(Equipamento equipamento){
-        this.equipamento = equipamento;
+        
     }
 
     public Software getSoftware(){
