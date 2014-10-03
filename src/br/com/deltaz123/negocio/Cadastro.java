@@ -85,7 +85,7 @@ public class Cadastro{
         int posicao;
         posicao = this.buscaEquipamento(codigo); 
         if (posicao == -1) {
-            JOptionPane.showMessageDialog(null, "Não existe este Eqiuipamento");
+            JOptionPane.showMessageDialog(null, "Não existe este Equipamento");
         }else {
             //this.getEquipamento()[posicao].setCodEquipamento("vazio");
         }
