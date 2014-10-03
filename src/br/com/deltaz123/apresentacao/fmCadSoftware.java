@@ -6,9 +6,9 @@
 package br.com.deltaz123.apresentacao;
 
 
+import br.com.deltaz123.negocio.Software;
 import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,21 +22,13 @@ import javax.swing.JTextField;
  *
  * @author Ruan
  */
-public class fmCadSoftware extends JFrame implements ActionListener{
-
+public class fmCadSoftware extends JFrame{
+    fmPrincipal cadastro = new fmPrincipal();
     /**
      * Creates new form fmCadSoftware
      */
-    public fmCadSoftware() {
+    public fmCadSoftware(){
         initComponents();
-        btCadastrar.addActionListener(this);
-    }
-    
-    @Override
-    public void actionPerformed(ActionEvent evento){
-        if(evento.getSource() == btCadastrar){           
-            
-        }
     }
     
     public static Date formataData(String data) throws ParseException{   
@@ -281,11 +273,35 @@ public class fmCadSoftware extends JFrame implements ActionListener{
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
         // TODO add your handling code here:
         
+        Software dados = new Software();
+        dados.cadastrarDados(
+                txtNomeSoftware.getText(),
+                txtFabricante.getText(),
+                txtVersaoSoftware.getText(),
+                txtCodNotaFiscal.getText(),
+                txtDataNotaFiscal.getText(),
+                txtChaveLicença.getText(),
+                txtDataExpiracaoLicenca.getText(),
+                txtClassificacaoSoftware.getText());
     }//GEN-LAST:event_btCadastrarActionPerformed
 
     private void btExibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirActionPerformed
         // TODO add your handling code here:
+        String valorPesquisado = JOptionPane.showInputDialog(null, "Digite o código do equipamento a ser pesquisado: ");
+        Software software = new Software(){};
+        software = cadastro.cadastroSoftware.exibirSoftware(valorPesquisado);
         
+        if(software.getNomeSoftware().equals(valorPesquisado)){
+            txtNomeSoftware.setText(software.getNomeSoftware());
+            txtFabricante.setText(software.getFabricante());
+            txtVersaoSoftware.setText(software.getFabricante());
+            txtCodNotaFiscal.setText(software.getNota_fiscal());
+            txtDataNotaFiscal.setText(software.getDataNota());
+            txtChaveLicença.setText(software.getChaveLicenca());
+            txtDataExpiracaoLicenca.setText(software.getDataEspiracao());
+            txtClassificacaoSoftware.setText(software.getClassificacao());
+        }
+            
     }//GEN-LAST:event_btExibirActionPerformed
 
     private void btAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarActionPerformed

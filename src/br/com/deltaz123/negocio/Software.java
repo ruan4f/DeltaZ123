@@ -18,9 +18,9 @@ public class Software {
     private String fabricante ;
     private String versao;
     private String nota_fiscal ;
-    private Date dataNota ;
+    private String dataNota ;
     private String chaveLicenca;
-    private Date dataEspiracao;
+    private String dataEspiracao;
     private String classificacao;
 	
     //Construtor padrão
@@ -28,7 +28,7 @@ public class Software {
 	super();
     }
     
-    public Software(int codSequencial, String nomeSoftware, String fabricante, String versao, String nota_fiscal, Date dataNota, String chaveLicenca,Date dataEspiracao, String classificacao) {
+    public Software(int codSequencial, String nomeSoftware, String fabricante, String versao, String nota_fiscal, String dataNota, String chaveLicenca, String dataEspiracao, String classificacao) {
         super();
         this.codSequencial = codSequencial;
         this.nomeSoftware = nomeSoftware;
@@ -41,8 +41,8 @@ public class Software {
         this.classificacao = classificacao;
     }
         
-    public void cadastrarDados(int codSequencial, String nomeSoftware, String fabricante, String versao, String nota_fiscal, Date dataNota, String chaveLicenca,Date dataEspiracao, String classificacao){
-        this.codSequencial = codSequencial;
+    public void cadastrarDados(/*int codSequencial,*/ String nomeSoftware, String fabricante, String versao, String nota_fiscal, String dataNota, String chaveLicenca, String dataEspiracao, String classificacao){
+        //this.codSequencial = codSequencial;
         this.nomeSoftware = nomeSoftware;
         this.fabricante = fabricante;
         this.versao = versao;
@@ -57,6 +57,7 @@ public class Software {
 		
     }
     
+    /*
     public boolean verificaValidade(){  
 	//falsepara fora da validade e true para dentro da validade        
 	boolean valido;  
@@ -68,7 +69,7 @@ public class Software {
 	else  
             valido = true;  	      
             return valido;  
-	}  
+    }*/
 
     /**
      * @return the codSequencial
@@ -143,14 +144,14 @@ public class Software {
     /**
      * @return the dataNota
      */
-    public Date getDataNota() {
+    public String getDataNota() {
         return dataNota;
     }
 
     /**
      * @param dataNota the dataNota to set
      */
-    public void setDataNota(Date dataNota) {
+    public void setDataNota(String dataNota) {
         this.dataNota = dataNota;
     }
 
@@ -171,14 +172,14 @@ public class Software {
     /**
      * @return the dataEspiracao
      */
-    public Date getDataEspiracao() {
+    public String getDataEspiracao() {
         return dataEspiracao;
     }
 
     /**
      * @param dataEspiracao the dataEspiracao to set
      */
-    public void setDataEspiracao(Date dataEspiracao) {
+    public void setDataEspiracao(String dataEspiracao) {
         this.dataEspiracao = dataEspiracao;
     }
 
