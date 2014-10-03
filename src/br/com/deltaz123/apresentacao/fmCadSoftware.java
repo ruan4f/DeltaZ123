@@ -273,8 +273,7 @@ public class fmCadSoftware extends JFrame{
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
         // TODO add your handling code here:
         
-        Software dados = new Software();
-        dados.cadastrarDados(
+        Software dados = new Software(
                 txtNomeSoftware.getText(),
                 txtFabricante.getText(),
                 txtVersaoSoftware.getText(),
@@ -283,6 +282,8 @@ public class fmCadSoftware extends JFrame{
                 txtChaveLicença.getText(),
                 txtDataExpiracaoLicenca.getText(),
                 txtClassificacaoSoftware.getText());
+        
+        cadastro.inserirSoftware(dados);
     }//GEN-LAST:event_btCadastrarActionPerformed
 
     private void btExibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirActionPerformed

@@ -28,9 +28,9 @@ public class Software {
 	super();
     }
     
-    public Software(int codSequencial, String nomeSoftware, String fabricante, String versao, String nota_fiscal, String dataNota, String chaveLicenca, String dataEspiracao, String classificacao) {
+    public Software(/*int codSequencial,*/ String nomeSoftware, String fabricante, String versao, String nota_fiscal, String dataNota, String chaveLicenca, String dataEspiracao, String classificacao) {
         super();
-        this.codSequencial = codSequencial;
+        //this.codSequencial = codSequencial;
         this.nomeSoftware = nomeSoftware;
         this.fabricante = fabricante;
         this.versao = versao;

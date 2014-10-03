@@ -73,8 +73,15 @@ public class Cadastro{
         
         equipamento.remove(posicao);
     }
+    
+    public void exclusaoSoftware(String codigo){
+        int posicao;
+        posicao = this.buscaSoftware(codigo); 
+        
+        software.remove(posicao);
+    }
 
-    public void atualizacao(String codigo){
+    public void atualizacaoEquipamento(String codigo){
         int posicao;
         posicao = this.buscaEquipamento(codigo); 
         if (posicao == -1) {
