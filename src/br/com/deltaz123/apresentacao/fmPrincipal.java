@@ -162,6 +162,11 @@ public class fmPrincipal extends javax.swing.JFrame {
         jMenu3.add(jMenuItem7);
 
         jMenuItem8.setText("Equipamento");
+        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem8ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem8);
 
         jMenuBar1.add(jMenu3);
@@ -227,10 +232,17 @@ public class fmPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
-        fmAltSoftware alteraSoftware = new fmAltSoftware();
+        fmCadSoftware cadastroSoftware = new fmCadSoftware();
         
-        alteraSoftware.setVisible(true);
+        cadastroSoftware.setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+        // TODO add your handling code here:
+        fmCadEquipamento cadastroEquipamento = new fmCadEquipamento();
+        
+        cadastroEquipamento.setVisible(true);
+    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private String mostrarData(){
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");

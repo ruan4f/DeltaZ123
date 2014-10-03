@@ -5,6 +5,7 @@
  */
 package br.com.deltaz123.negocio;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,10 +14,8 @@ import javax.swing.JOptionPane;
  */
 public class Cadastro{
     //Declaração de atributos
-    private Equipamento equipamento[];
-    private int index = 0;
-    private Software software;
-
+    ArrayList<Equipamento> equipamento = new ArrayList();
+    int index = 0;
     //Construtor
     public Cadastro(){
         super();
@@ -24,14 +23,22 @@ public class Cadastro{
 
     public Cadastro(Equipamento equipamento){
         super();
-       
-        this.equipamento[1] = equipamento;
+        this.equipamento.add(index, equipamento);
+        ++index;
     }
 
     //Declaração de métodos
+    
+    public Equipamento exibir(String codigo){
+        int posicao;
+        posicao = this.busca(codigo);
+        
+        return equipamento.get(posicao);
+    }
+    
     public int busca(String codigo){
         for (int i = 0; i <= this.index; i++){
-            if (equipamento[i].getCodEquipamento() == codigo ) {
+            if (equipamento.get(i).getCodEquipamento().equals(codigo) ) {
                 return i;
             }
         }return -1;
@@ -43,8 +50,7 @@ public class Cadastro{
         if (posicao == -1) {
             JOptionPane.showMessageDialog(null, "Não existe este Eqiuipamento");
         }else {
-         this.equipamento[posicao].setCodEquipamento("vazio");
-         ++ index;
+            //this.getEquipamento()[posicao].setCodEquipamento("vazio");
         }
     }
 
@@ -54,32 +60,8 @@ public class Cadastro{
         if (posicao == -1) {
             JOptionPane.showMessageDialog(null, "Não existe este Eqiuipamento");
         }else {
-         this.equipamento[posicao].setCodEquipamento("vazio");
-         ++ index;
+            //this.getEquipamento()[posicao].setCodEquipamento("vazio");
         }
     }
-
-    public void inserirEquimento(Equipamento equipamento){
-        this.equipamento[index] = equipamento;
-        ++ index;
-    }
-
-    //Declaração de Getters e Setters
-    public void getEquipamento(){
-     
-    }
-
-    public void setEquipamento(Equipamento equipamento){
-        
-    }
-
-    public Software getSoftware(){
-        return software;
-    }
-
-    public void setSoftware(Software software){
-        this.software = software;
-    }
-
 }
 
