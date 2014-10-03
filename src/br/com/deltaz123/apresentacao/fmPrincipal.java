@@ -241,11 +241,11 @@ public class fmPrincipal extends javax.swing.JFrame {
     }
     
     public void inserirEquipamento(Equipamento dados){
-        cadastroEquipamento.inserir(dados);
+        cadastroEquipamento.inserirEquipamento(dados);
     }
     
     public void inserirSoftware(Software dados){
-        cadastroEquipamento.inserir(dados);
+        cadastroEquipamento.inserirSoftware(dados);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

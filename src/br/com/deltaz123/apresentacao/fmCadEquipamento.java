@@ -280,7 +280,7 @@ public class fmCadEquipamento extends JFrame{
         // TODO add your handling code here:
         String valorPesquisado = JOptionPane.showInputDialog(null, "Digite o código do equipamento a ser pesquisado: ");
         Equipamento equipamento = new Equipamento(){};
-        equipamento = cadastro.cadastroEquipamento.exibir(valorPesquisado);
+        equipamento = cadastro.cadastroEquipamento.exibirEquipamento(valorPesquisado);
         
         if(equipamento.getCodEquipamento().equals(valorPesquisado)){
             
@@ -333,9 +333,9 @@ public class fmCadEquipamento extends JFrame{
         // TODO add your handling code here:
         String valorPesquisado = JOptionPane.showInputDialog(null, "Digite o código do equipamento a ser Excluido: ");
         Equipamento equipamento = new Equipamento(){};
-        equipamento = cadastro.cadastroEquipamento.exibir(valorPesquisado);
+        equipamento = cadastro.cadastroEquipamento.exibirEquipamento(valorPesquisado);
         if(equipamento.getCodEquipamento().equals(valorPesquisado)){
-            cadastro.cadastroEquipamento.exclusao(valorPesquisado);
+            cadastro.cadastroEquipamento.exclusaoEquipamento(valorPesquisado);
         }else {
             JOptionPane.showMessageDialog(null, "Não existe este Equipamento");    
         }
