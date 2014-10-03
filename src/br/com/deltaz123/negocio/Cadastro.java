@@ -15,6 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class Cadastro{
     ArrayList<Equipamento> equipamento = new ArrayList<>();
+    ArrayList<Software> software = new ArrayList<>();
     //Equipamento[] equipamento = new Equipamento[10000000];
     //private int index;
 
@@ -22,7 +23,6 @@ public class Cadastro{
     //Construtor
     public Cadastro(){
         super();
-        
     }
     
     public Cadastro(Equipamento equipamento){
@@ -34,7 +34,6 @@ public class Cadastro{
     
     public Equipamento exibir(String codigo){        
         return equipamento.get(this.busca(codigo));
-        
     }
     
     public int busca(String codigo){
@@ -51,11 +50,8 @@ public class Cadastro{
     public void exclusao(String codigo){
         int posicao;
         posicao = this.busca(codigo); 
-        if (posicao == -1) {
-            JOptionPane.showMessageDialog(null, "Não existe este Eqiuipamento");
-        }else {
-            //this.getEquipamento()[posicao].setCodEquipamento("vazio");
-        }
+        
+        equipamento.remove(posicao);
     }
 
     public void atualizacao(String codigo){
@@ -70,6 +66,10 @@ public class Cadastro{
     
     public void inserir(Equipamento dadosDoEquipamento){
         this.equipamento.add(dadosDoEquipamento);
+    }
+    
+    public void inserir(Software dadosDoSoftware){
+        this.software.add(dadosDoSoftware);
     }
 }
 

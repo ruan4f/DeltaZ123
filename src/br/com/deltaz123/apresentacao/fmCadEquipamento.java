@@ -5,9 +5,6 @@
  */
 package br.com.deltaz123.apresentacao;
 
-
-import br.com.deltaz123.negocio.Cadastro;
-
 import br.com.deltaz123.negocio.Equipamento;
 import br.com.deltaz123.negocio.Fixo;
 import br.com.deltaz123.negocio.Portatil;
@@ -173,6 +170,11 @@ public class fmCadEquipamento extends JFrame{
         });
 
         btExcluir.setText("Excluir");
+        btExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btExcluirActionPerformed(evt);
+            }
+        });
 
         btAlterar.setText("Alterar");
         btAlterar.addActionListener(new java.awt.event.ActionListener() {
@@ -256,13 +258,13 @@ public class fmCadEquipamento extends JFrame{
             
             case "Fixo":
                 Fixo fixo = new Fixo(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText());
-                cadastro.inserir(fixo);
+                cadastro.inserirEquipamento(fixo);
                 //cadastroEquipamento = new Cadastro(fixo);
                 //JOptionPane.showMessageDialog(null, "Valor do id na tela principal ");
                 break;
             case "Portátil":
                 Portatil portatil = new Portatil(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText()) ;
-                cadastro.inserir(portatil);
+                cadastro.inserirEquipamento(portatil);
                 //cadastroEquipamento = new Cadastro(portatil);
                 //JOptionPane.showMessageDialog(null, "Tamanho do meu cadastro "+cadastroEquipamento.index);
                 break;
@@ -271,33 +273,73 @@ public class fmCadEquipamento extends JFrame{
 
     private void btAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarActionPerformed
         // TODO add your handling code here:
-        
+        btCadastrarActionPerformed(evt);
     }//GEN-LAST:event_btAlterarActionPerformed
 
     private void btExibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirActionPerformed
         // TODO add your handling code here:
-        int valorPesquisado = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o código do equipamento a ser pesquisado: "));
+        String valorPesquisado = JOptionPane.showInputDialog(null, "Digite o código do equipamento a ser pesquisado: ");
         Equipamento equipamento = new Equipamento(){};
-        if(valorPesquisado == -1){
-            JOptionPane.showMessageDialog(null, "Valor não encontrado. Por favor faça uma nova busca!!!");
-        } else{
-            String valor = String.valueOf(valorPesquisado);
-            equipamento = cadastro.cadastroEquipamento.exibir(valor);//cadastroEquipamento.exibir(valor);
-       
+        equipamento = cadastro.cadastroEquipamento.exibir(valorPesquisado);
+        
+        if(equipamento.getCodEquipamento().equals(valorPesquisado)){
+            
             txtCodEquipamento.setText(equipamento.getCodEquipamento());
             txtCodPatrimonial.setText(equipamento.getCodPatrimonial());
             //Tipo de equipamento
+            String tipoEquipamento = equipamento.getTipo();
+            if(null != tipoEquipamento)switch (tipoEquipamento) {
+                
+                case "Fixo": 
+                    cbTipo.setSelectedItem("Fixo");
+                    break;
+                case "Portátil":
+                    cbTipo.setSelectedItem("Portátil");
+                    break;
+            }
             txtAcessorio.setText(equipamento.getAcesorio());
             //Tipo de uso
+            String tipoUso = equipamento.getTipoUso();
+            if(null != tipoUso)switch (tipoUso) {
+                
+                case "Coletivo": 
+                    cbUso.setSelectedItem("Coletivo");
+                    break;
+                case "Individual":
+                    cbUso.setSelectedItem("Individual");
+                    break;
+            }
             //Tipo de rede
+            String tipoRede = equipamento.getTipoRede();
+            if(null != tipoRede)switch (tipoRede) {
+                
+                case "Wirelles": 
+                    cbTipoRede.setSelectedItem("Wirelles");
+                    break;
+                case "Rádio Frequência":
+                    cbTipoRede.setSelectedItem("Rádio Frequência");
+                    break;
+                case "Fixo":
+                    cbTipoRede.setSelectedItem("Fixo");
+                    break;
+            }
             txtMatUsuario.setText(equipamento.getMatUsuario());
+        } else{
+            JOptionPane.showMessageDialog(null, "Valor não encontrado. Por favor faça uma nova busca!!!");
         }
-        
-        
-        
-        
-        
     }//GEN-LAST:event_btExibirActionPerformed
+
+    private void btExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExcluirActionPerformed
+        // TODO add your handling code here:
+        String valorPesquisado = JOptionPane.showInputDialog(null, "Digite o código do equipamento a ser Excluido: ");
+        Equipamento equipamento = new Equipamento(){};
+        equipamento = cadastro.cadastroEquipamento.exibir(valorPesquisado);
+        if(equipamento.getCodEquipamento().equals(valorPesquisado)){
+            cadastro.cadastroEquipamento.exclusao(valorPesquisado);
+        }else {
+            JOptionPane.showMessageDialog(null, "Não existe este Equipamento");    
+        }
+    }//GEN-LAST:event_btExcluirActionPerformed
 
     /**
      * @param args the command line arguments

@@ -7,6 +7,7 @@ package br.com.deltaz123.apresentacao;
 
 import br.com.deltaz123.negocio.Cadastro;
 import br.com.deltaz123.negocio.Equipamento;
+import br.com.deltaz123.negocio.Software;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
@@ -22,6 +23,7 @@ import javax.swing.Timer;
 public class fmPrincipal extends javax.swing.JFrame {
     
     Cadastro cadastroEquipamento = new Cadastro();
+    Cadastro cadastroSoftware = new Cadastro();
     /**
      * Creates new form fmPrincipal
      */
@@ -49,11 +51,6 @@ public class fmPrincipal extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema Gerenciador DeltaZ123");
@@ -101,7 +98,7 @@ public class fmPrincipal extends javax.swing.JFrame {
         );
         jDesktopPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        jMenu1.setText("Cadastros");
+        jMenu1.setText("Informações");
 
         jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setText("Usuário");
@@ -143,37 +140,6 @@ public class fmPrincipal extends javax.swing.JFrame {
 
         jMenu2.setText("Relatórios");
         jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("Alterações");
-
-        jMenuItem5.setText("Usuário");
-        jMenu3.add(jMenuItem5);
-
-        jMenuItem6.setText("Departamento");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem6);
-
-        jMenuItem7.setText("Software");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem7);
-
-        jMenuItem8.setText("Equipamento");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem8);
-
-        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -230,24 +196,6 @@ public class fmPrincipal extends javax.swing.JFrame {
         cadastroEquipamentos.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
-        fmCadSoftware cadastroSoftware = new fmCadSoftware();
-        
-        cadastroSoftware.setVisible(true);
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
-
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
-        fmCadEquipamento cadastroEquipamentos = new fmCadEquipamento();
-        
-        cadastroEquipamentos.setVisible(true);
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
-
     private String mostrarData(){
         DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         //Obter data atual com Date
@@ -292,7 +240,11 @@ public class fmPrincipal extends javax.swing.JFrame {
         });
     }
     
-    public void inserir(Equipamento dados){
+    public void inserirEquipamento(Equipamento dados){
+        cadastroEquipamento.inserir(dados);
+    }
+    
+    public void inserirSoftware(Software dados){
         cadastroEquipamento.inserir(dados);
     }
 
@@ -300,16 +252,11 @@ public class fmPrincipal extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel laData;
     private javax.swing.JLabel laUsuario;
