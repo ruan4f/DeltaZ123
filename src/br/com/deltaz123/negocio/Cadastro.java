@@ -67,5 +67,9 @@ public class Cadastro{
             //this.getEquipamento()[posicao].setCodEquipamento("vazio");
         }
     }
+    
+    public void inserir(Equipamento dadosDoEquipamento){
+        this.equipamento.add(dadosDoEquipamento);
+    }
 }
 

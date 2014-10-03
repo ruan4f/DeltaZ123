@@ -5,12 +5,13 @@
  */
 package br.com.deltaz123.apresentacao;
 
+import br.com.deltaz123.negocio.Cadastro;
 import br.com.deltaz123.negocio.Equipamento;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+
 import java.util.Date;
 import javax.swing.Timer;
 
@@ -19,7 +20,8 @@ import javax.swing.Timer;
  * @author Ruan
  */
 public class fmPrincipal extends javax.swing.JFrame {
-
+    
+    Cadastro cadastroEquipamento = new Cadastro();
     /**
      * Creates new form fmPrincipal
      */
@@ -223,9 +225,9 @@ public class fmPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
-        fmCadEquipamento cadastroEquipamento = new fmCadEquipamento();
+        fmCadEquipamento cadastroEquipamentos = new fmCadEquipamento();
         
-        cadastroEquipamento.setVisible(true);
+        cadastroEquipamentos.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -241,9 +243,9 @@ public class fmPrincipal extends javax.swing.JFrame {
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
-        fmCadEquipamento cadastroEquipamento = new fmCadEquipamento();
+        fmCadEquipamento cadastroEquipamentos = new fmCadEquipamento();
         
-        cadastroEquipamento.setVisible(true);
+        cadastroEquipamentos.setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private String mostrarData(){
@@ -288,6 +290,10 @@ public class fmPrincipal extends javax.swing.JFrame {
                 
             }
         });
+    }
+    
+    public void inserir(Equipamento dados){
+        cadastroEquipamento.inserir(dados);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -22,7 +22,7 @@ import javax.swing.JTextField;
  */
 public class fmCadEquipamento extends JFrame{ 
     
-    Cadastro cadastroEquipamento;
+    fmPrincipal cadastro = new fmPrincipal();
     /**
      * Creates new form fmCodEquipamento
      */
@@ -256,12 +256,14 @@ public class fmCadEquipamento extends JFrame{
             
             case "Fixo":
                 Fixo fixo = new Fixo(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText());
-                cadastroEquipamento = new Cadastro(fixo);
+                cadastro.inserir(fixo);
+                //cadastroEquipamento = new Cadastro(fixo);
                 //JOptionPane.showMessageDialog(null, "Valor do id na tela principal ");
                 break;
             case "Portátil":
                 Portatil portatil = new Portatil(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText()) ;
-                cadastroEquipamento = new Cadastro(portatil);
+                cadastro.inserir(portatil);
+                //cadastroEquipamento = new Cadastro(portatil);
                 //JOptionPane.showMessageDialog(null, "Tamanho do meu cadastro "+cadastroEquipamento.index);
                 break;
         }
@@ -280,7 +282,7 @@ public class fmCadEquipamento extends JFrame{
             JOptionPane.showMessageDialog(null, "Valor não encontrado. Por favor faça uma nova busca!!!");
         } else{
             String valor = String.valueOf(valorPesquisado);
-            equipamento = cadastroEquipamento.exibir(valor);
+            equipamento = cadastro.cadastroEquipamento.exibir(valor);//cadastroEquipamento.exibir(valor);
        
             txtCodEquipamento.setText(equipamento.getCodEquipamento());
             txtCodPatrimonial.setText(equipamento.getCodPatrimonial());
