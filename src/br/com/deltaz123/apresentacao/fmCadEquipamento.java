@@ -250,31 +250,32 @@ public class fmCadEquipamento extends JFrame{
         } 
         txtCodEquipamento.requestFocus();
     }//GEN-LAST:event_btLimparActionPerformed
-
+      
     private void btCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarActionPerformed
         // TODO add your handling code here:
+        
         String tipo = (String) cbTipo.getSelectedItem();
         if(null != tipo)switch (tipo) {
             
             case "Fixo":
                 Fixo fixo = new Fixo(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText());
                 cadastro.inserirEquipamento(fixo);
+                JOptionPane.showMessageDialog(null, "Equipamento Fixo adiconado com sucesso!");
                 //cadastroEquipamento = new Cadastro(fixo);
                 //JOptionPane.showMessageDialog(null, "Valor do id na tela principal ");
                 break;
             case "Portátil":
                 Portatil portatil = new Portatil(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText()) ;
                 cadastro.inserirEquipamento(portatil);
+                JOptionPane.showMessageDialog(null, "Equipamento portátil adiconado com sucesso!");
+
                 //cadastroEquipamento = new Cadastro(portatil);
                 //JOptionPane.showMessageDialog(null, "Tamanho do meu cadastro "+cadastroEquipamento.index);
                 break;
+            
+            
         }
     }//GEN-LAST:event_btCadastrarActionPerformed
-
-    private void btAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarActionPerformed
-        // TODO add your handling code here:
-        btCadastrarActionPerformed(evt);
-    }//GEN-LAST:event_btAlterarActionPerformed
 
     private void btExibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirActionPerformed
         // TODO add your handling code here:
@@ -341,6 +342,22 @@ public class fmCadEquipamento extends JFrame{
         }
     }//GEN-LAST:event_btExcluirActionPerformed
 
+    private void btAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarActionPerformed
+        // TODO add your handling code here:
+
+        // Buscar o equipamento e exibir na tela .
+        // btExibirActionPerformed(evt);
+        // salvar a alteração
+
+        //btCadastrarActionPerformed(evt);
+        if (!" ".equals(txtCodEquipamento.getText())){
+        cadastro.cadastroEquipamento.exclusaoEquipamento(txtCodEquipamento.getText());
+        btCadastrarActionPerformed(evt);
+        }else {
+            JOptionPane.showMessageDialog( null , "Nenhum equipamento cadastrado no sistema");
+        }
+    }//GEN-LAST:event_btAlterarActionPerformed
+    
     /**
      * @param args the command line arguments
      */
