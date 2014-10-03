@@ -5,13 +5,16 @@
  */
 package br.com.deltaz123.negocio;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Patrocínio
  */
 public class Cadastro{
     //Declaração de atributos
-    private Equipamento equipamento;
+    private Equipamento equipamento[];
+    private int index = 0;
     private Software software;
 
     //Construtor
@@ -22,24 +25,43 @@ public class Cadastro{
     public Cadastro(Equipamento equipamento, Software software){
         super();
         this.software = software;
-        this.equipamento = equipamento;
+        this.equipamento[1] = equipamento;
     }
 
     //Declaração de métodos
-    public void busca(){
-
+    public int busca(String codigo){
+        for (int i = 0; i <= this.index; i++){
+            if (equipamento[i].getCodEquipamento() == codigo ) {
+                return i;
+            }
+        }return -1;
     }
 
-    public void exclusao(){
-
+    public void exclusao(String codigo){
+        int posicao;
+        posicao = this.busca(codigo); 
+        if (posicao == -1) {
+            JOptionPane.showMessageDialog(null, "Não existe este Eqiuipamento");
+        }else {
+         this.equipamento[posicao].setCodEquipamento("vazio");
+         ++ index;
+        }
     }
 
-    public void atualizacao(){
-
+    public void atualizacao(String codigo){
+        int posicao;
+        posicao = this.busca(codigo); 
+        if (posicao == -1) {
+            JOptionPane.showMessageDialog(null, "Não existe este Eqiuipamento");
+        }else {
+         this.equipamento[posicao].setCodEquipamento("vazio");
+         ++ index;
+        }
     }
 
-    public void inserir(){
-
+    public void inserirEquimento(Equipamento equipamento){
+        this.equipamento[index] = equipamento;
+        ++ index;
     }
 
     //Declaração de Getters e Setters
