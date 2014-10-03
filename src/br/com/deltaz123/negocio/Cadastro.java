@@ -13,9 +13,9 @@ import javax.swing.JOptionPane;
  * @author Patrocínio
  */
 public class Cadastro{
-    //Declaração de atributos
-    ArrayList<Equipamento> equipamento = new ArrayList();
+    public ArrayList<Equipamento> equipamento = new ArrayList<Equipamento>();
     int index = 0;
+    
     //Construtor
     public Cadastro(){
         super();
@@ -23,25 +23,27 @@ public class Cadastro{
 
     public Cadastro(Equipamento equipamento){
         super();
-        this.equipamento.add(index, equipamento);
-        ++index;
+        
+        this.equipamento.add(equipamento);
+        index++;
     }
 
     //Declaração de métodos
     
     public Equipamento exibir(String codigo){
-        int posicao;
+        int posicao= 0;
         posicao = this.busca(codigo);
         
         return equipamento.get(posicao);
     }
     
     public int busca(String codigo){
-        for (int i = 0; i <= this.index; i++){
+        for (int i = 0; i < equipamento.size(); i++){
             if (equipamento.get(i).getCodEquipamento().equals(codigo) ) {
                 return i;
             }
-        }return -1;
+        }
+        return -1;
     }
 
     public void exclusao(String codigo){

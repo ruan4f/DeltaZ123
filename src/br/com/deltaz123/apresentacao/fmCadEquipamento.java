@@ -256,10 +256,12 @@ public class fmCadEquipamento extends JFrame{
             case "Fixo":
                 Fixo fixo = new Fixo(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText());
                 cadastroEquipamento = new Cadastro(fixo);
+                JOptionPane.showMessageDialog(null, "Tamanho do meu cadastro "+cadastroEquipamento.equipamento.size());
                 break;
             case "Portátil":
                 Portatil portatil = new Portatil(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText()) ;
                 cadastroEquipamento = new Cadastro(portatil);
+                JOptionPane.showMessageDialog(null, "Tamanho do meu cadastro "+cadastroEquipamento.equipamento.size());
                 break;
         }
     }//GEN-LAST:event_btCadastrarActionPerformed
