@@ -84,7 +84,7 @@ public class fmAltEquipamentos extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtCodPatrimonial, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                    .addComponent(txtCodPatrimonial)
                     .addComponent(txtAcessorio)
                     .addComponent(txtMatUsuario)
                     .addComponent(txtTipoEquipamento)
@@ -130,6 +130,11 @@ public class fmAltEquipamentos extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         btAlterar.setText("Alterar");
+        btAlterar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAlterarActionPerformed(evt);
+            }
+        });
 
         btExibir.setText("Exibir");
         btExibir.addActionListener(new java.awt.event.ActionListener() {
@@ -198,6 +203,11 @@ public class fmAltEquipamentos extends javax.swing.JFrame {
         // TODO add your handling code here:
         
     }//GEN-LAST:event_btExibirActionPerformed
+
+    private void btAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btAlterarActionPerformed
 
     /**
      * @param args the command line arguments

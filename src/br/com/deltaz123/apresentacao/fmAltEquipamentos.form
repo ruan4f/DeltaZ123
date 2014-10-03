@@ -71,7 +71,7 @@
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="txtCodPatrimonial" alignment="0" pref="193" max="32767" attributes="0"/>
+                      <Component id="txtCodPatrimonial" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtAcessorio" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtMatUsuario" alignment="0" max="32767" attributes="0"/>
                       <Component id="txtTipoEquipamento" alignment="0" max="32767" attributes="0"/>
@@ -223,6 +223,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Alterar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btAlterarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btExibir">
           <Properties>
