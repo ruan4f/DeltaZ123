@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class Software {
     //Declarção de atributos
-    private int codSequencial;
+    //private int codSequencial;
     private String nomeSoftware ;
     private String fabricante ;
     private String versao;
@@ -74,16 +74,16 @@ public class Software {
     /**
      * @return the codSequencial
      */
-    public int getCodSequencial() {
+    /*public int getCodSequencial() {
         return codSequencial;
-    }
+    }*/
 
     /**
      * @param codSequencial the codSequencial to set
      */
-    public void setCodSequencial(int codSequencial) {
+    /*public void setCodSequencial(int codSequencial) {
         this.codSequencial = codSequencial;
-    }
+    }*/
 
     /**
      * @return the nomeSoftware

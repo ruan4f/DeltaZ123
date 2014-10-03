@@ -288,7 +288,7 @@ public class fmCadSoftware extends JFrame{
 
     private void btExibirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btExibirActionPerformed
         // TODO add your handling code here:
-        String valorPesquisado = JOptionPane.showInputDialog(null, "Digite o código do equipamento a ser pesquisado: ");
+        String valorPesquisado = JOptionPane.showInputDialog(null, "Digite o código do Software a ser pesquisado: ");
         Software software = new Software(){};
         software = cadastro.cadastroSoftware.exibirSoftware(valorPesquisado);
         
