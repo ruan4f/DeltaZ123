@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
  * @author Patrocínio
  */
 public class Cadastro{
-    public ArrayList<Equipamento> equipamento = new ArrayList<Equipamento>();
+    public ArrayList<Equipamento> equipamento = new ArrayList<>();
     int index = 0;
     
     //Construtor
@@ -23,18 +23,14 @@ public class Cadastro{
 
     public Cadastro(Equipamento equipamento){
         super();
-        
         this.equipamento.add(equipamento);
         index++;
     }
 
     //Declaração de métodos
     
-    public Equipamento exibir(String codigo){
-        int posicao= 0;
-        posicao = this.busca(codigo);
-        
-        return equipamento.get(posicao);
+    public Equipamento exibir(String codigo){        
+        return equipamento.get(this.busca(codigo));
     }
     
     public int busca(String codigo){
