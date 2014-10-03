@@ -8,6 +8,7 @@ package br.com.deltaz123.apresentacao;
 
 import br.com.deltaz123.negocio.Cadastro;
 import br.com.deltaz123.negocio.Fixo;
+import br.com.deltaz123.negocio.Portatil;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -199,19 +200,16 @@ public class fmCadEquipamento extends JFrame implements ActionListener{
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btCadastrar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btAlterar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btExcluir)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(btExibir)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(btCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btExibir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btAlterar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btExcluir)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btLimpar)
+                .addGap(31, 31, 31))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,10 +219,9 @@ public class fmCadEquipamento extends JFrame implements ActionListener{
                     .addComponent(btCadastrar)
                     .addComponent(btLimpar)
                     .addComponent(btExcluir)
-                    .addComponent(btAlterar))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btExibir)
-                .addContainerGap())
+                    .addComponent(btAlterar)
+                    .addComponent(btExibir))
+                .addGap(40, 40, 40))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -233,10 +230,10 @@ public class fmCadEquipamento extends JFrame implements ActionListener{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 378, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,7 +241,7 @@ public class fmCadEquipamento extends JFrame implements ActionListener{
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -269,14 +266,16 @@ public class fmCadEquipamento extends JFrame implements ActionListener{
         // TODO add your handling code here:
        
         String tipo = (String) cbTipo.getSelectedItem();
-        if(tipo == "Fixo"){
-        Fixo fixo = new Fixo(txtCodEquipamento.getText(), tipo, tipo, tipo, tipo, tipo, tipo);
-         cadastro.setEquipamento(fixo);
-        else if (tipo == "Portátil"){
-                Portatil portatil = new Portatil() ;
+        if(null != tipo)switch (tipo) {
+            case "Fixo":
+                Fixo fixo = new Fixo(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText());
+                cadastro.setEquipamento(fixo);
+                break;
+            case "Portátil":
+                Portatil portatil = new Portatil(txtCodEquipamento.getText(), txtCodPatrimonial.getText(), (String) cbTipo.getSelectedItem(), txtAcessorio.getText(),(String) cbUso.getSelectedItem(), (String) cbTipoRede.getSelectedItem(), txtMatUsuario.getText()) ;
                 cadastro.setEquipamento(portatil);
-                }
-    }
+                break;
+        }
     }//GEN-LAST:event_btCadastrarActionPerformed
 
     private void btAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAlterarActionPerformed
